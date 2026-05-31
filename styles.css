@@ -1,0 +1,498 @@
+:root{
+--lilas:#cfa8dc;
+--roxo:#6e3a67;
+--laranja:#f57d2e;
+--rosa:#f0c8ff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:var(--lilas);color:var(--roxo)}
+header{padding:20px;background:var(--roxo)}
+nav{display:flex;gap:20px;justify-content:center}
+nav a{color:white;text-decoration:none}
+.hero{text-align:center;padding:80px 20px}
+.container{max-width:1100px;margin:auto;padding:30px}
+h1,h2{margin-bottom:15px}
+section{margin-bottom:40px}
+.filtros{margin:20px 0}
+button{background:var(--laranja);border:none;color:white;padding:10px 15px;border-radius:20px;cursor:pointer}
+.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:white;padding:15px;border-radius:12px}
+.card img{width:100%;height:180px;object-fit:cover;border-radius:8px}
+form{display:flex;flex-direction:column;gap:10px}
+input,textarea{padding:10px}
+footer{text-align:center;padding:20px}
+
+
+#feedback{
+    margin-top:15px;
+    text-align:center;
+    font-weight:600;
+}
+
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#faf6f1;
+    color:#6e3a67;
+    line-height:1.8;
+}
+
+/* ==========================
+   CORES
+========================== */
+
+:root{
+
+    --lilas:#cfa8dc;
+    --roxo:#6e3a67;
+    --rosa:#f0c8ff;
+    --laranja:#f57d2e;
+    --laranja-hover:#e98f53;
+    --creme:#faf6f1;
+    --bege:#f2e7dc;
+    --castanho:#7b5a50;
+    --branco:#ffffff;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header{
+    background:linear-gradient(
+        135deg,
+        var(--roxo),
+        var(--lilas)
+    );
+
+    padding:20px 0;
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+nav{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:50px;
+    transition:.3s;
+}
+
+nav a:hover{
+    background:rgba(255,255,255,.2);
+
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero{
+
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:50px;
+    background:
+    linear-gradient(
+      rgba(110,58,103,.6),
+      rgba(110,58,103,.6)
+    ),
+    url("../assets/hero.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:800px;
+    color:white;
+}
+
+.hero h1{
+    font-size:5rem;
+    font-family:'Cormorant Garamond',serif;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+.hero-btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:var(--laranja);
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    background:var(--laranja-hover);
+    transform:translateY(-3px);
+}
+
+/* ==========================
+   SECÇÕES
+========================== */
+
+section{
+    padding:100px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:3rem;
+    text-align:center;
+    margin-bottom:40px;
+}
+
+/* ==========================
+   SOBRE MIM
+========================== */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.about p{
+    text-align:justify;
+}
+
+/* ==========================
+   TIMELINE
+========================== */
+
+.timeline{
+    position:relative;
+    max-width:900px;
+    margin:auto;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    width:4px;
+    height:100%;
+    background:var(--lilas);
+    transform:translateX(-50%);
+}
+
+.timeline-item{
+    width:50%;
+    padding:20px 40px;
+    position:relative;
+}
+
+.timeline-item:nth-child(odd){
+    left:0;
+}
+
+.timeline-item:nth-child(even){
+    left:50%;
+}
+
+.timeline-content{
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+/* ==========================
+   GALERIA
+========================== */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card-body{
+    padding:20px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+/* ==========================
+   FILTROS
+========================== */
+
+.filters{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:40px;
+}
+
+.filter-btn{
+    border:none;
+    padding:12px 25px;
+    background:var(--laranja);
+    color:white;
+    border-radius:50px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.filter-btn:hover{
+    background:var(--laranja-hover);
+}
+
+/* ==========================
+   WORKSHOPS
+========================== */
+
+.workshop{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    margin-bottom:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+/* ==========================
+   FRASE INSPIRADORA
+========================== */
+
+.quote-box{
+    text-align:center;
+    background:var(--lilas);
+    color:white;
+    padding:50px;
+    border-radius:20px;
+}
+
+.quote-box button{
+    margin-top:20px;
+    border:none;
+    background:var(--laranja);
+    color:white;
+    padding:15px 25px;
+    border-radius:50px;
+    cursor:pointer;
+}
+
+/* ==========================
+   FORMULÁRIO
+========================== */
+
+.contact-form{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-form label{
+    font-weight:600;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    font-size:1rem;
+}
+
+.contact-form button{
+    border:none;
+    background:var(--laranja);
+    color:white;
+    padding:15px;
+    border-radius:50px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contact-form button:hover{
+    background:var(--laranja-hover);
+}
+
+#feedback{
+    text-align:center;
+    margin-top:20px;
+    font-weight:bold;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+    background:var(--roxo);
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+/* ==========================
+   RESPONSIVO
+========================== */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    .timeline::before{
+        left:20px;
+    }
+
+    .timeline-item{
+        width:100%;
+        left:0 !important;
+        padding-left:60px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+    }
+
+    .categoria{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    padding:5px 12px;
+
+    border-radius:20px;
+
+    background:#cfa8dc;
+
+    color:white;
+
+    font-size:.8rem;
+
+    text-transform:capitalize;
+}
+
+.sem-resultados{
+
+    text-align:center;
+
+    font-size:1.2rem;
+
+    color:#6e3a67;
+
+    padding:40px;
+}
+
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.filter-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  background: #f57d2e;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-btn:hover {
+  background: #e98f53;
+}
+
+.filter-btn.ativo {
+  background: #6e3a67;
+}
+
+.categoria {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: #cfa8dc;
+  color: white;
+  font-size: 0.8rem;
+}
+
+.sem-resultados {
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 30px;
+}
+}
+
