@@ -67,6 +67,7 @@ body{
     --branco:#ffffff;
 }
 
+
 /* ==========================
    HEADER
 ========================== */
@@ -86,6 +87,7 @@ header{
 
 nav{
     max-width:1200px;
+    min-width:600px;
     margin:auto;
     display:flex;
     justify-content:center;
@@ -122,7 +124,7 @@ nav a:hover{
       rgba(110,58,103,.6),
       rgba(110,58,103,.6)
     ),
-    url("../assets/hero.jpg");
+    url("assets/img/Design sem nome (2).jpg");
 
     background-size:cover;
     background-position:center;
@@ -199,6 +201,17 @@ h2{
 .about p{
     text-align:justify;
 }
+
+/*=========================
+ flexbox 
+============================*/
+
+.flex img {
+    max-width: 100%;
+    display: block;
+}
+
+
 
 /* ==========================
    TIMELINE
@@ -318,7 +331,7 @@ h2{
 }
 
 /* ==========================
-   FRASE INSPIRADORA
+   SUGESTÕES ACTIVIDADES
 ========================== */
 
 .quote-box{
@@ -424,75 +437,64 @@ footer{
 
     .categoria{
 
-    display:inline-block;
+        display:inline-block;
+        margin-top:15px;
+        padding:5px 12px;
+        border-radius:20px;
+         background:#cfa8dc;
+        color:white;
+        font-size:.8rem;
+        text-transform:capitalize;
+    }
 
-    margin-top:15px;
-
-    padding:5px 12px;
-
-    border-radius:20px;
-
-    background:#cfa8dc;
-
-    color:white;
-
-    font-size:.8rem;
-
-    text-transform:capitalize;
-}
-
-.sem-resultados{
-
-    text-align:center;
-
-    font-size:1.2rem;
-
-    color:#6e3a67;
-
-    padding:40px;
-}
+    .sem-resultados{
+        text-align:center;
+        font-size:1.2rem;
+      color:#6e3a67;
+       padding:40px;
+    }
 
 
-.filters {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
-}
+    .filters {
+     display: flex;
+     justify-content: center;
+     gap: 10px;
+     flex-wrap: wrap;
+     margin-bottom: 40px;
+    }
 
-.filter-btn {
-  padding: 12px 20px;
-  border: none;
-  border-radius: 30px;
-  background: #f57d2e;
-  color: white;
-  cursor: pointer;
-  transition: 0.3s;
-}
+    .filter-btn {
+     padding: 12px 20px;
+      border: none;
+      border-radius: 30px;
+     background: #f57d2e;
+     color: white;
+     cursor: pointer;
+     transition: 0.3s;
+    }
 
-.filter-btn:hover {
-  background: #e98f53;
-}
+    .filter-btn:hover {
+     background: #e98f53;
+    }
 
-.filter-btn.ativo {
-  background: #6e3a67;
-}
+    .filter-btn.ativo {
+     background: #6e3a67;
+    }
 
-.categoria {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 5px 12px;
-  border-radius: 20px;
-  background: #cfa8dc;
-  color: white;
-  font-size: 0.8rem;
-}
+    .categoria {
+     display: inline-block;
+     margin-top: 10px;
+     padding: 5px 12px;
+     border-radius: 20px;
+     background: #cfa8dc;
+     color: white;
+     font-size: 0.8rem;
+    }
 
-.sem-resultados {
-  text-align: center;
-  font-size: 1.1rem;
-  padding: 30px;
-}
+    .sem-resultados {
+     text-align: center;
+     font-size: 1.1rem;
+     padding: 30px;
+    }
 }
 

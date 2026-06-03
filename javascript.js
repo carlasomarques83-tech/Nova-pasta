@@ -1,7 +1,7 @@
 const produtos = [
 {
  id:1,
- titulo:"Flores Silvestres",
+ titulo:"frida khalo",
  categoria:"Bordado",
  preco:25,
  disponivel:true
@@ -246,6 +246,21 @@ if (botaoAtividade && textoAtividade) {
   });
 
 }
+let totalAtividades = 0;
+
+botaoAtividade.addEventListener("click", () => {
+
+    const indice =
+      Math.floor(Math.random() * atividades.length);
+
+      textoAtividade.textContent =
+      atividades[indice];
+
+      totalAtividades++;
+
+      document.getElementById("contador").textContent =
+      totalAtividades;
+});
 
 
 // ==========================
@@ -353,10 +368,10 @@ const produtos = [
 const projetos = [
     {
         id: 1,
-        titulo: "Flores Silvestres",
+        titulo: "Frida khalo",
         categoria: "bordado",
-        imagem: "assets/bordado1.jpg",
-        descricao: "Bordado livre inspirado na natureza."
+        imagem: "assets/img/b.frida.jpg",
+        descricao: "Bordado livre em fotografia estampada em tecido, com pequeno pormenor de aplicações  ."
     },
 
     {
@@ -506,3 +521,135 @@ botaoAtividade.addEventListener("click", () => {
       totalAtividades;
 });
 }
+
+// ==========================
+// DADOS
+// ==========================
+
+const trabalhos = [
+{
+    id: 1,
+    categoria: "Bordado",
+    titulo: "Frida Kahlo",
+    preco: 25
+},
+{
+    id: 2,
+    categoria: "Crochê",
+    titulo: "Mala Artesanal",
+    preco: 35
+},
+{
+    id: 3,
+    categoria: "Vitrinismo",
+    titulo: "Montra Premiada",
+    preco: "Projeto"
+}
+];
+
+// ==========================
+// GALERIA
+// ==========================
+
+function render(lista) {
+
+    const galeria = document.getElementById("galeria");
+
+    if (!galeria) return;
+
+    galeria.innerHTML = "";
+
+    const semResultados =
+        document.getElementById("semResultados");
+
+    if (semResultados) {
+        semResultados.style.display =
+            lista.length ? "none" : "block";
+    }
+
+    lista.forEach(item => {
+
+        const card = document.createElement("div");
+
+        card.classList.add("card");
+
+        card.innerHTML = `
+            <img
+                src="https://via.placeholder.com/300x200"
+                alt="${item.titulo}">
+
+            <h3>${item.titulo}</h3>
+
+            <p>${item.categoria}</p>
+
+            <p>
+                ${typeof item.preco === "number"
+                    ? item.preco + "€"
+                    : item.preco}
+            </p>
+        `;
+
+        galeria.appendChild(card);
+
+    });
+
+}
+
+// ==========================
+// FILTROS
+// ==========================
+
+function filtrar(categoria) {
+
+    if (categoria === "Todos") {
+
+        render(trabalhos);
+
+        return;
+    }
+
+    const resultados =
+        trabalhos.filter(item =>
+            item.categoria === categoria
+        );
+
+    render(resultados);
+
+}
+
+// ==========================
+// FORMULÁRIO
+// ==========================
+
+const form =
+    document.getElementById("contactForm");
+
+if (form) {
+
+    form.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const feedback =
+            document.getElementById("feedback");
+
+        if (feedback) {
+
+            feedback.textContent =
+                "Mensagem enviada com sucesso!";
+
+            feedback.style.color =
+                "#2e7d32";
+        }
+
+        form.reset();
+
+    });
+
+}
+
+// ==========================
+// CARREGAMENTO INICIAL
+// ==========================
+
+render(trabalhos);
