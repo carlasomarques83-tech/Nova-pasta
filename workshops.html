@@ -9,15 +9,15 @@
 <body>
 <header>
 <nav>
-<a href="index.html">Início</a>
-<a href="portfolio.html">Portefólio</a>
-<a href="workshops.html">Workshops</a>
+    <a href="index.html">Início</a>
+    <a href="index.html">Contacto</a>
 </nav>
 </header>
 
 <main>
 
  <h1>Workshops</h1>
+    <p>Recentemente, mais propriamante no mes de outubro, de 2025, tive o prazer de dar partilhar um bocadinho do que sei, com crianças dos 3 aos 5 anos, que frequentam um espaço.... </p>
     
 <section class="flex"> 
     <div>
@@ -58,6 +58,7 @@
 
 
 <style>
+
 *{
 
  /* ==========================
@@ -65,7 +66,7 @@
 ========================== */
 
 
-    margin:0;
+    margin:1 auto;
     padding:0;
     box-sizing:border-box;
 }
@@ -75,17 +76,23 @@ html{
 }
 
 a{
-    color: #f0dfee;
+    color: #f19afd;
 }
 
 h1{
  text-align: center;
  font-family:'Cormorant Garamond',serif;
-    font-size:3rem;
-    text-align:center;
+    font-size:2rem;
+    text-align:flex;
     margin-bottom:40px;
 }
 
+p {
+   text-align: center;
+ font-family:'Cormorant Garamond',serif;
+    font-size: 1.5rem;
+    margin-bottom:auto; 
+}
 .container{
     max-width:800px;
     margin:auto;
@@ -93,10 +100,10 @@ h1{
 
 body{
     font-family:'Montserrat',sans-serif;
-    background:#faf6f1;
+    background:#fce3cd;
     color:#6e3a67;
     line-height:1.8;
-    text-align: center;
+    text-align:justify;
     
 }
 
@@ -116,6 +123,7 @@ body{
     --branco:#ffffff;
 }
 
+
 /* ==========================
    HEADER
 ========================== */
@@ -130,6 +138,9 @@ header{
     position:sticky;
     top:0;
     z-index:999;
+    font-size: 1rem;
+    text-align: center;
+    gap: 10px;
 
 }
 
@@ -209,39 +220,28 @@ nav a:hover{
 }
 
 
-.workshop{
-    background:white;
-  padding:30px;
-   border-radius:20px;
-   margin-bottom:30px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:30px;
-    align-items:center;
 
-
-}
 
 
 /*flexbox */
 
-.flex>div {
-    display:box center;  
-    flex:1 1 100px;
-    margin: 10px;
+.flex {
+    display:flexbox;  
+    flex:auto auto auto;
+    margin: 10px 10px 10px;
 }
 
 
 
 .flex.img {
-    min-width: 50%;
-    display:flex;
-    padding:30px;
+    min-width: 50px;
+    max-block-size:100% ;
+    display:center;
+    padding: 40px;
    border-radius:20px;
    margin-bottom:30px;
     box-shadow:0 10px 25px rgba(0,0,0,.08);
-    display:grid;
+    display:flexbox;
     grid-template-columns:1fr 1fr;
     gap:30px;
     align-items:justify;
@@ -262,11 +262,6 @@ section{
     margin:auto;
 }
 
-h2{
-    font-family:'Cormorant Garamond',serif;
-    font-size:3rem;
-    text-align:center;
-    margin-bottom:40px;
-}
+
 
 </style>
