@@ -29,15 +29,9 @@ footer{text-align:center;padding:20px}
     font-weight:600;
 }
 
-/* ==========================
-   RESET
-========================== */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+
+
 
 html{
     scroll-behavior:smooth;
@@ -91,7 +85,7 @@ nav{
     margin:auto;
     display:flex;
     justify-content:center;
-    gap:20px;
+    gap:10px;
 }
 
 nav a{
@@ -158,7 +152,7 @@ nav a:hover{
 
 .hero-btn:hover{
     background:var(--laranja-hover);
-    transform:translateY(-3px);
+    transform:translateY(3px);
 }
 
 /* ==========================
@@ -188,7 +182,7 @@ h2{
 .about{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:60px;
+    gap:30px;
     align-items:center;
 }
 
@@ -199,73 +193,14 @@ h2{
 }
 
 .about p{
-    text-align:justify;
-}
+    text-align:justify,;
+    font-size:21,2px;
 
-/*=========================
- flexbox 
-============================*/
-
-.flex img {
-    max-width: 100%;
-    display: block;
-    
 }
 
 
 
-/* ==========================
-   TIMELINE
-========================== */
 
-.timeline{
-    position:relative;
-    max-width:900px;
-    margin:auto;
-}
-
-.timeline::before{
-    content:"";
-    position:absolute;
-    left:50%;
-    top:0;
-    width:4px;
-    height:100%;
-    background:var(--lilas);
-    transform:translateX(-50%);
-}
-
-.timeline-item{
-    width:50%;
-    padding:20px 40px;
-    position:relative;
-}
-
-.timeline-item:nth-child(odd){
-    left:0;
-}
-
-.timeline-item:nth-child(even){
-    left:50%;
-}
-
-.timeline-content{
-    background:white;
-    padding:20px;
-    border-radius:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-
-/* ==========================
-   GALERIA
-========================== */
-
-.gallery-grid{
-    display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-}
 
 .card{
     background:white;
@@ -273,24 +208,10 @@ h2{
     overflow:hidden;
     box-shadow:0 10px 25px rgba(0,0,0,.08);
     transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-}
-
-.card img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-}
-
-.card-body{
-    padding:20px;
-}
-
-.card h3{
-    margin-bottom:10px;
+    align-items:center;
+    text-align:justify;
+    font-size: 20px;
+    gap: 20px;
 }
 
 /* ==========================
@@ -595,7 +516,7 @@ nav a:hover{
 ========================== */
 
 .hero{
-    min-height:90vh;
+    min-height:100vh;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -677,7 +598,7 @@ h2{
     grid-template-columns:1fr 1fr;
     gap:30px;
     align-items:center;
-    background-color: #f3e1fa;
+    background-color:none;
     margin:10px;
 
 }
@@ -694,59 +615,8 @@ h2{
 
 }
 
-/*=========================
- area
-============================*/
-.area {
-    display:flex;
-    flex-wrap: wrap;
-    max-width: 800%;
-    background-color:rgb(174, 78, 153) ;
-    grid-template-columns:(3,200px);
-    flex-direction:100px 100px;
-    max-width:800px;
-    gap: 30px;
-    align-items:auto;
-
-}
-
-.area > div {
-    display: flex;
-    margin: 20px;
-    border-radius:20px;
-}
-
-.area img {
-    width: 300px;
-    border-radius:20px;
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
-    text-align:justify;
-    font-size: 1.2rem;
-    flex-wrap:wrap ;
-     width:100%;
-    border-radius:20px;
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
-}
 
 
-.area text p {
-    margin-bottom: 15px;
-    font-family:'Cormorant Garamond',serif;
-    text-align:justify;
-    font-size: 1.2rem;
-    font-size:1.5rem;
-    margin-bottom:30px;
-
-}
-
-.area-section{
-    padding:100%; 
-}
-
-.area-container{
-    max-width:800;
-    margin:0 0 10;
-}
 
 h2{
     font-family:'Cormorant Garamond',serif;
@@ -765,121 +635,7 @@ h2{
     
 }
 
-/*=========================
- flexgrid 
-============================*/
-.flex {
-    display:grid;
-    grid-template-columns:repeat(4,minmax(200px,1fr));
-    max-width: 1100px;
-    margin: bottom 10px;
-    grid-gap:auto auto auto;
 
-}
-
-.flex-img {
-    max-width:50px;
-    border-radius:10px;
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
-    text-align:justify;
-    font-size: 1.2rem;
-    margin:10px;
-    display:flexbox;
-    unicode-bidi: isolate;   
-}
-
-
- 
-
-.logotipo {
-    grid-column: 1;
-    grid-row:2-5 ;
-    border-top: 10px;
-
-}
-
-
-
-/* ==========================
-   TIMELINE
-========================== */
-
-.timeline{
-    position:relative;
-    max-width:900px;
-    margin:auto;
-    background-color: #e98f53;
-}
-
-.timeline::before{
-    content:"";
-    position:relative;
-    left:50%;
-    top:0;
-    width:4px;
-    height:100%;
-    background:var(--lilas);
-    transform:translateX(-50%);
-}
-
-.timeline-item{
-    width:50%;
-    padding:20px 40px;
-    position:relative;
-}
-
-.timeline-item:nth-child(odd){
-    left:0;
-}
-
-.timeline-item:nth-child(even){
-    left:50%;
-}
-
-.timeline-content{
-    background:white;
-    padding:20px;
-    border-radius:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-
-/* ==========================
-   GALERIA
-========================== */
-
-.gallery-grid{
-
-    display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-}
-
-.card{
-    background:white;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-}
-
-.card img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-}
-
-.card-body{
-    padding:20px;
-}
-
-.card h3{
-    margin-bottom:10px;
-}
 
 /* ==========================
    FILTROS
@@ -1008,18 +764,16 @@ footer{
 
     .about{
         grid-template-columns:1fr;
+        display:wrap;
+        background-color: #cfa8dc;
+       
     }
 
-    .timeline::before{
-        left: auto;
+    .about-conteiner{
+        display: wrap;
+        background-color: #cfa8dc;
     }
-
-    .timeline-item{
-        width:50%;
-        left:0 !important;
-        padding-left:30px;
-    }
-
+    
     nav{
         flex-wrap:wrap;
     }
@@ -1032,7 +786,7 @@ footer{
         padding:5px 12px;
         border-radius:20px;
          background:#cfa8dc;
-        color:white;
+        color:#cfa8dc;
         font-size:.8rem;
         text-transform:capitalize;
     }
@@ -1077,7 +831,7 @@ footer{
      padding: 5px 12px;
      border-radius: 20px;
      background: #cfa8dc;
-     color: white;
+     background-color: #cfa8dc;
      font-size: 0.8rem;
     }
 
@@ -1095,7 +849,7 @@ footer{
 --lilas:#cfa8dc;
 --roxo:#6e3a67;
 --laranja:#f57d2e;
---rosa:#f0c8ff;
+--rosa:#cfa8dc;
 }
 
 *{box-sizing:border-box;margin:0;padding:0}

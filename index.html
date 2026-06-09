@@ -136,9 +136,9 @@
                         <h3>Bordado</h3>
 
                         <p>
-                            O bordado livre surgiu na minha vida durante o processo lento e intimo de ultrapassar o luto após a partida da
+                             O bordado livre surgiu na minha vida durante o processo lento e intimo de ultrapassar o luto após a partida da
                         minha Mãe. Foi nele que me refugiei e me aproximei das minhas memórias de infançia, quando me tentou ensinar a
-                        bordar. Bordar é um precesso delicado, que pede paz, amor e luz dentro de nós.
+                        bordar. <br>Bordar é um precesso delicado, que pede paz, amor e luz dentro de nós.
                             O bordado representa um espaço de criação delicada e emocional,
                             onde cada ponto é construído manualmente com intenção, textura
                             e sensibilidade artística.</p>
@@ -146,6 +146,7 @@
                                  <img src="assets/IMG_20211012_113137_498.jpg" img>
                                  <img src="assets/img/bord.merlin.jpg">
                                 <img src="assets/513657783_10163067771524936_4930606434870200342_n.jpg">
+                                <img src="assets/img/bord2.jpg">
                         
                     </div>
 
@@ -167,6 +168,7 @@
                            Durante 18 anos trabalhei como cabeleireira,
                          desenvolvendo a criatividade, contacto humano e
                             sensibilidade estética.
+                            <br>
                           Na pandemia decidi voltar a estudar e concluir
                             uma etapa importante do meu percurso académico, concluindo o curso de Técnica de Vitrinismo.
                             
@@ -177,6 +179,7 @@
                             <img src="assets/img/vitri3.png">
                             <img src="assets/img/vitri4.png">
                             <img src="assets/img/vitri10.png">
+                            <img src="assets/img/vitri12.png">
                         </p>
                     </div>
                 </article>
@@ -225,7 +228,8 @@
                 <div>
 
                     <img src="assets/Carla Sofia Reis.jpg" alt="Arte Terapia">
-                    <img src="assets/Carla Sofia Reis.jpg" alt="Arte Terapia">
+                    <img src="assets/img/pintura.jpg" alt="Arte Terapia">
+                    <img src="assets/img/bordar.jpg" width="30px" >
 
                 </div>
             </div>
@@ -322,15 +326,17 @@
 
 
 <style>
-
+@media (max-width:768px)  {
+    
+}
 *{
     margin: 10px;;
     padding:10px;
-    padding: 50px 20px;
+    padding: 20px 20px;
 }
 
 .container{
-    max-width:1000px;
+    max-width:10px;
     margin:auto;
 }
 
@@ -398,7 +404,7 @@ nav{
     margin:0 auto;
     display:flex;
     justify-content:center;
-    gap:20px;
+    gap:10px;
     
 }
 
@@ -459,7 +465,7 @@ nav a:hover{
 }
 
 .hero-btn{
-    display:inline-block;
+    display: inline;
     padding:15px 35px;
     background:var(--laranja);
     color:white;
@@ -478,11 +484,11 @@ nav a:hover{
 ========================== */
 
 section{
-    padding:100px 20px;
+    padding:10px 20px;
 }
 
 .container{
-    max-width: 800%;
+    max-width: 100%;
     margin:auto;
 }
 
@@ -499,24 +505,28 @@ h2{
 
 .about{
     display:center;
-    text-align: justify;
+    text-align: justifys;
     grid-template-columns:auto auto;
     gap:20px;
-    align-items:responsive;
+    align-items:justify;
     margin: 10px;
+    background-color:none;
 
 }
 
 .about img{
-    width:100%;
+    width: responsive;
     border-radius:20px;
     box-shadow:0 15px 35px rgba(0,0,0,.15);
+    align-items:wrap;
 }
 
 .about p{
     text-align:justify;
-    font-size: 1.2rem;
+    font-size: 20px;
+    gap: 20px;
 
+    
 }
 
 
@@ -542,28 +552,24 @@ h2{
  flexgrid 
 ============================*/
 .flex {
-    display:grid;
-    grid-template-columns:repeat(4,minmax(200px,1fr));
-    max-width: 1100px;
-    margin: bottom 10px;
-    grid-gap:auto auto;
+    display:-webkit-inline-box;
+    grid-template-columns:repeat(2,minmax(50px,1fr));
+    max-width:100%;
+    margin: 10px;
+    grid:10px;
 
 }
 
 .flex-img {
-    max-width:50px;
+    max-width:100%;
     border-radius:10px;
     box-shadow:0 15px 35px rgba(0,0,0,.15);
     text-align:justify;
     font-size: 1.2rem;
     margin:10px;
-    display:flexbox;
+    display:grid;
     unicode-bidi: isolate;   
 }
-
-
-
-
 
 
 /* ==========================
@@ -574,34 +580,41 @@ h2{
 
     display:grid;
     grid-template-columns:
-    repeat(auto-fit,minmax(350px,1fr));
-    gap: 50px;
+    repeat(auto-fit,minmax(200px,1fr));
+    gap:10px;
 }
 
 .card{
-    background:white;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.3s;
+    display:wrap;
+    text-align:justify;
+    
+    gap:5px;
+    align-items:center;
+    margin:5px;
+    background-color:none;
+
+    
 }
 
-.card:hover{
-    transform:translateY(-8px);
+
+.card.hover{
+    transform:translateY(10px);
 }
 
 .card img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
+    width: 500px;
+    height:600px;
+    
 }
 
 .card-body{
     padding:20px;
+    
 }
 
 .card h3{
     margin-bottom:10px;
+    display:  center;
 }
 
 /* ==========================
@@ -613,7 +626,7 @@ h2{
     justify-content:center;
     flex-wrap:wrap;
     gap:10px;
-    margin-bottom:40px;
+    margin-bottom:4px;
 }
 
 .filter-btn{
@@ -635,7 +648,7 @@ h2{
 ========================== */
 
 .workshop{
-    background:white;
+    background:none;
     padding:30px;
     border-radius:20px;
     margin-bottom:30px;
@@ -733,22 +746,14 @@ footer{
         grid-template-columns:1fr;
     }
 
-    .timeline::before{
-        left:20px;
-    }
-
-    .timeline-item{
-        width:100%;
-        left:0 !important;
-        padding-left:60px;
-    }
+    
 
     nav{
         flex-wrap:wrap;
     }
 
 
-     .categoria{
+    .categoria{
 
         display:inline-block;
         margin-top:15px;
